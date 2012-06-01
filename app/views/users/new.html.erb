@@ -1,6 +1,39 @@
 <% provide(:title, 'Inventar | New User') %>
+<h1>Fresh meat goes here</h1>
 
-<div class="center hero-unit">
-  <h1>Fresh meat goes here</h1>
+<div class="row">
+  <div class="span6 offset3">
+  	<%= form_for(@user) do |f| %>
+  	  <%= render 'shared/error_messages' %>
+
+  	  <%= f.label :beschaeftigt %>
+  	  <%= f.check_box :beschaeftigt, { checked: true } %>
+
+  	  <%= f.label :anrede %>
+  	  <%= f.text_field :anrede %>
+
+  	  <%= f.label :vorname %>
+  	  <%= f.text_field :vorname %>
+
+  	  <%= f.label :nachname %>
+  	  <%= f.text_field :nachname %>
+
+  	  <%= f.label :email %>
+  	  <%= f.text_field :email %>
+
+  	  <%= f.label :telefonnummer %>
+  	  <%= f.text_field :telefonnummer %>
+
+  	  <%= f.label :position %>
+  	  <%= f.text_field :position %>
+
+  	  <%= f.label :abteilung %>
+  	  <%= f.text_field :abteilung %>
+
+  	  <%= f.label :kommentar %>
+  	  <%= f.text_field :kommentar %>
+
+  	  <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+  	<% end %>
+  </div>
 </div>
-

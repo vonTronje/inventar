@@ -1,0 +1,27 @@
+<% provide(:title, 'Inventar | New Mobilfunkgeraet') %>
+<h1>Schwarzbären hierher!</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+  	<%= form_for(@mobilfunkgeraet) do |f| %>
+  	  <!-- TODO render error messages -->
+
+  	  <%= f.label :imei %>
+  	  <%= f.text_field :imei %>
+
+  	  <%= f.label :tel %>
+  	  <%= f.text_field :telefonnummer %>
+
+  	  <%= f.label :typ %>
+  	  <%= f.text_field :typ %>
+
+  	  <%= f.label :geraete_pin %>
+  	  <%= f.text_field :geraete_pin %>
+
+      <%= f.label :kommentar %>
+      <%= f.text_field :kommentar %>
+
+  	  <%= f.submit "Create Mobilfunkgeraet", class: "btn btn-large btn-primary" %>
+  	<% end %>
+  </div>
+</div>

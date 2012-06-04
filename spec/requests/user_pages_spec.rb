@@ -3,12 +3,6 @@ require 'spec_helper'
 describe "User pages" do
   
   subject { page }
-
-  describe "new user page" do
-  	before { visit new_user_path }
-
-  	it { should have_selector('title', text: 'Inventar | New User') }
-  end
   
   describe "profile page" do
 	  let(:user) { FactoryGirl.create(:user) }
@@ -22,6 +16,8 @@ describe "User pages" do
   	before { visit new_user_path}
 
   	let(:submit) { "Create my account" }
+
+    it { should have_selector('title', text: 'Inventar | New User') }
 
     describe "with invalid information" do
       it "should not create a user" do

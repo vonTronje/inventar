@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120604112848) do
+ActiveRecord::Schema.define(:version => 20120604115809) do
+
+  create_table "mobilfunkgeraets", :force => true do |t|
+    t.string   "typ"
+    t.string   "geraete_pin"
+    t.string   "telefonnummer"
+    t.string   "imei"
+    t.string   "kommentar"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "pc_austattungs", :force => true do |t|
     t.string   "typ"

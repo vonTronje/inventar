@@ -13,7 +13,7 @@ describe "PcAustattung pages" do
 
     describe "with invalid information" do
       it "should not create a pc_austattung" do
-      	expect {click_button submit }.not_to change(PcAustattung, :count)
+      	expect { click_button submit }.not_to change(PcAustattung, :count)
       end
     end
 
@@ -39,6 +39,10 @@ describe "PcAustattung pages" do
   	before { visit pc_austattungs_path }
 
   	it { should have_selector('title', text: 'Inventar | All PC Austattungen') }
+
+    PcAustattung.all.each do |austattung|
+      it { should have_content(austattung.service_tag) }
+    end
   end
 
   describe "details" do

@@ -5,6 +5,8 @@ root to: 'static_pages#home'
 match '/readme', to: 'static_pages#readme'
 resources :users
 resources :pc_austattungs
+resources :mobilfunkgeraets
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

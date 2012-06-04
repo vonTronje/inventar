@@ -1,0 +1,22 @@
+<% provide(:title, "Inventar | All Mobilfunkgeraete") %>
+
+<table class="table table-bordered">
+  <thead>
+    <th> IMEI </th>
+    <th> Tel. </th>
+    <th> Typ </th>
+    <th> Geraete PIN </th>
+    <th> Kommentar </th>
+  </thead>
+  <tbody>
+    <% @mobilfunkgeraets.each do |geraet| %>
+      <tr>
+        <td> <%= geraet.imei %> </td>
+        <td> <%= geraet.telefonnummer %> </td>
+        <td> <%= geraet.typ %> </td>
+        <td> <%= geraet.geraete_pin %> </td>
+        <td> <%= geraet.kommentar %> </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

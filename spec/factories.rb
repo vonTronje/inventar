@@ -1,4 +1,5 @@
 FactoryGirl.define do
+  
   factory :user do
     vorname "Hagen"
     nachname "Mahnke"
@@ -20,5 +21,13 @@ FactoryGirl.define do
     status "kaputt"
     teamviewer "jwhduq39e21"
     typ "das beste und  neuste und schoenste"
+  end
+
+  factory :mobilfunkgeraet do
+    typ "somethin cool"
+    geraete_pin "13251341"
+    telefonnummer "767836698"
+    imei "jh23hh2341"
+    kommentar "so ein schoenes kommentar"
   end
 end

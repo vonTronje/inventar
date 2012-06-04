@@ -1,2 +1,9 @@
 <% provide(:title, "Inventar | #{@user.vorname} #{@user.nachname}") %>
 <h1><%= "#{@user.vorname} #{@user.nachname}" %></h1>
+
+<dl class="dl-horizontal">
+	<% @user.attributes.each do |attribute| %>
+  	<dt><%= "#{attribute[0]}" %></dt>
+  	<dd><%= "#{attribute[1]}" %></dd>
+  	<% end %>
+</dl>

@@ -44,4 +44,14 @@ describe "User pages" do
   	  end
   	end
   end
+
+  describe "index" do
+    before { visit users_path }
+
+    it { should have_selector('title', text: 'Inventar | All users') }
+
+    User.all.each do |user|
+      page.should have_content(user.name)
+    end
+  end
 end

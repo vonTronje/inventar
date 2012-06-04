@@ -1,0 +1,26 @@
+<% provide(:title, "Inventar | All PC Austattungen") %>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Service Tag</th>
+      <th>Modell</th>
+      <th>Typ</th>
+      <th>Teamviewer ID</th>
+      <th>MAC LAN</th>
+      <th>MAC WLAN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @pc_austattungs.each do |pc_austattung| %>
+    <tr>
+      <td><%= link_to pc_austattung.service_tag, pc_austattung %></td>
+      <td><%= link_to pc_austattung.modell, pc_austattung %></td>
+      <td><%= link_to pc_austattung.typ, pc_austattung %></td>
+      <td><%= link_to pc_austattung.teamviewer, pc_austattung %></td>
+      <td><%= link_to pc_austattung.mac_lan, pc_austattung %></td>
+      <td><%= link_to pc_austattung.mac_wlan, pc_austattung %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

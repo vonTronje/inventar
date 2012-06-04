@@ -1,0 +1,8 @@
+<% provide(:title, "Inventar | PC-Austattung") %>
+
+<dl class="dl-horizontal">
+	<% @pc_austattung.attributes.each do |attribute| %>
+  	<dt><%= "#{attribute[0]}" %></dt>
+  	<dd><%= "#{attribute[1]}" %></dd>
+  	<% end %>
+</dl>

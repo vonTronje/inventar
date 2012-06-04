@@ -1,0 +1,36 @@
+<% provide(:title, 'Inventar | New PC-Austattung') %>
+<h1>Fresh circuits goes here</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+  	<%= form_for(@pc_austattung) do |f| %>
+  	  <!-- TODO render error messages -->
+
+  	  <%= f.label :service_tag %>
+  	  <%= f.text_field :service_tag %>
+
+  	  <%= f.label :modell %>
+  	  <%= f.text_field :modell %>
+
+  	  <%= f.label :typ %>
+  	  <%= f.text_field :typ %>
+
+  	  <%= f.label :teamviewer %>
+  	  <%= f.text_field :teamviewer %>
+
+  	  <%= f.label :mac_lan %>
+  	  <%= f.text_field :mac_lan %>
+
+  	  <%= f.label :mac_wlan %>
+  	  <%= f.text_field :mac_wlan %>
+
+  	  <%= f.label :status %>
+  	  <%= f.text_field :status %>
+
+      <%= f.label :kommentar %>
+      <%= f.text_field :kommentar %>
+
+  	  <%= f.submit "Create PC-Austattung", class: "btn btn-large btn-primary" %>
+  	<% end %>
+  </div>
+</div>

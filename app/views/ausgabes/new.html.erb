@@ -1,0 +1,22 @@
+<% provide(:title, "Inventar | New Ausgabe") %>
+
+<h1>Giving with both hands</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+  	<%= form_for(@ausgabe) do |f| %>
+  	  <%= render 'shared/error_messages' %>
+
+  	  <%= f.label :ausgabedatum %>
+  	  <%= date_select "ausgabe", "ausgabedatum" %>
+
+  	  <%= f.label :rueckgabedatum %>
+  	  <%= date_select 'ausgabe', 'rueckgabedatum', :include_blank => true%>
+
+  	  <%= f.label :kommentar %>
+  	  <%= f.text_field :kommentar  %>
+
+  	  <%= f.submit "Create Ausgabe", class: "btn btn-large btn-primary" %>
+  	<% end %>
+  </div>
+</div>

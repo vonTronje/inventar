@@ -1,0 +1,18 @@
+<% provide(:title, "Inventar | Ausgabe") %>
+
+<table class="table table-bordered">
+  <thead>
+  	<th>ID</th>
+  	<th>Ausgabedatum</th>
+  	<th>Rueckgabedatum</th>
+  	<th>Kommmentar</th>
+  </thead>
+  <tbody>
+  	<tr>
+  	  <td><%= @ausgabe.id %></td>
+  	  <td><%= @ausgabe.ausgabedatum %></td>
+  	  <td><%= @ausgabe.rueckgabedatum %></td>
+  	  <td><%= @ausgabe.kommentar %></td>
+  	</tr>
+  </tbody>
+</table>

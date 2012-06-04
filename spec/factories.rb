@@ -30,4 +30,10 @@ FactoryGirl.define do
     imei "jh23hh2341"
     kommentar "so ein schoenes kommentar"
   end
+
+  factory :ausgabe do
+    ausgabedatum Date::current
+    rueckgabedatum Date::tomorrow
+    kommentar "haaaaaaaaaaaaaaaaaaaallo WELT"
+  end
 end

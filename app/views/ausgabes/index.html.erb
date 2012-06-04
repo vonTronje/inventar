@@ -1,0 +1,20 @@
+<% provide(:title, "Inventar | All Ausgaben") %>
+
+<table class="table table-bordered">
+  <thead>
+  	<th>ID</th>
+  	<th>Ausgabedatum</th>
+  	<th>Rueckgabedatum</th>
+  	<th>Kommentar</th>
+  </thead>
+  <tbody>
+  	<% @ausgabes.each do |ausgabe| %>
+  	  <tr>
+  	  	<td><%= ausgabe.id %></td>
+  	  	<td><%= ausgabe.ausgabedatum %></td>
+  	  	<td><%= ausgabe.rueckgabedatum %></td>
+  	  	<td><%= ausgabe.kommentar %></td>
+  	  </tr>
+  	<% end %>
+  </tbody>
+</table>

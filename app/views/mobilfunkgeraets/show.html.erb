@@ -1,20 +1,4 @@
 <% provide(:title, "Inventar | Mobilfunkgeraet") %>
+<h1><%= @mobilfunkgeraet.imei %></h1>
 
-<table class="table table-bordered">
-  <thead>
-  	<th> IMEI </th>
-  	<th> Tel. </th>
-  	<th> Typ </th>
-  	<th> Geraete PIN </th>
-  	<th> Kommentar </th>
-  </thead>
-  <tbody>
-    <tr>
-      <td> <%= @mobilfunkgeraet.imei %> </td>
-      <td> <%= @mobilfunkgeraet.telefonnummer %> </td>
-      <td> <%= @mobilfunkgeraet.typ %> </td>
-      <td> <%= @mobilfunkgeraet.geraete_pin %> </td>
-      <td> <%= @mobilfunkgeraet.kommentar %> </td>
-    </tr>
-  </tbody>
-</table>
+<%= render 'shared/attribute_tables' %>

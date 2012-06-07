@@ -1,8 +1,3 @@
 <% provide(:title, "Inventar | PC-Austattung") %>
-
-<dl class="dl-horizontal">
-	<% @pc_austattung.attributes.each do |attribute| %>
-  	<dt><%= "#{attribute[0]}" %></dt>
-  	<dd><%= "#{attribute[1]}" %></dd>
-  	<% end %>
-</dl>
+<h1><%= @pc_austattung.service_tag %></h1>
+<%= render 'shared/attribute_tables' %>

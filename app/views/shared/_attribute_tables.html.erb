@@ -26,7 +26,7 @@
   <% @users.each do |user| %>
     <tr>
       <% user.attributes.each do |user_attribute| %>
-        <td> <%= "#{user_attribute[1]}" %>
+        <td> <%= link_to "#{user_attribute[1]}", user %>
       <% end %>
     </tr>
   <% end %>
@@ -59,7 +59,7 @@
   <% @pc_austattungs.each do |pc_austattung| %>
     <tr>
       <% pc_austattung.attributes.each do |pc_austattung_attribute| %>
-        <td> <%= "#{pc_austattung_attribute[1]}" %>
+        <td> <%= link_to "#{pc_austattung_attribute[1]}", pc_austattung %>
       <% end %>
     </tr>
   <% end %>
@@ -91,7 +91,7 @@
   <% @ausgabes.each do |ausgabe| %>
     <tr>
       <% ausgabe.attributes.each do |ausgabe_attribute| %>
-        <td> <%= "#{ausgabe_attribute[1]}" %>
+        <td> <%= link_to "#{ausgabe_attribute[1]}", ausgabe %>
       <% end %>
     </tr>
   <% end %>
@@ -122,7 +122,7 @@
   <% @mobilfunkgeraets.each do |mobile| %>
     <tr>
       <% mobile.attributes.each do |mobile_attribute| %>
-        <td> <%= "#{mobile_attribute[1]}" %>
+        <td> <%= link_to "#{mobile_attribute[1]}" , mobile %>
       <% end %>
     </tr>
   <% end %>

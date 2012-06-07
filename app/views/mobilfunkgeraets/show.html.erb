@@ -1,4 +1,6 @@
 <% provide(:title, "Inventar | Mobilfunkgeraet") %>
+<% @ausgabes = Ausgabe.all %>
+
 <h1><%= @mobilfunkgeraet.imei %></h1>
 
 <%= render 'shared/attribute_tables' %>

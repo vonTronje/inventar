@@ -1,7 +1,9 @@
-<table class="table table-bordered">
-<thead>
+<!-- ################ User ################# -->
+
 <% if @user %>
-  
+	
+   <table class="table table-bordered">
+   <thead>  
    <%  @user.attributes.each do |attribute| %>
   	 <th> <%= "#{attribute[0]}" %> </th>
    <%  end %>
@@ -11,12 +13,15 @@
    <%  @user.attributes.each do |attribute| %>
      <td><%= "#{attribute[1]} " %> </td>
    <% end %>
-
+   </tbody>
+   </table>
 <% end %>
 
 <% if @users %>
-
-    <% example_user = User.first %>
+  
+  <table class="table table-bordered">
+  <thead>
+  <% example_user = User.first %>
 
     <% example_user.attributes.each do |attribute| %>
       <th> <%= "#{attribute[0]}" %> </th>
@@ -30,11 +35,16 @@
       <% end %>
     </tr>
   <% end %>
+  </tbody>
+  </table>
 <% end %>
 
+<!-- ################ PC-Austattung ################# -->
 
 <% if @pc_austattung %>
   
+  <table class="table table-bordered">
+  <thead>
    <%  @pc_austattung.attributes.each do |attribute| %>
   	 <th> <%= "#{attribute[0]}" %> </th>
    <%  end %>
@@ -44,11 +54,14 @@
    <%  @pc_austattung.attributes.each do |attribute| %>
      <td><%= "#{attribute[1]} " %> </td>
    <% end %>
-
+   </tbody>
+   </table>
 <% end %>
 
 <% if @pc_austattungs %>
     
+  <table class="table table-bordered">
+  <thead>
     <% example_pc_austattung = PcAustattung.first %>
 
     <% example_pc_austattung.attributes.each do |attribute| %>
@@ -63,42 +76,16 @@
       <% end %>
     </tr>
   <% end %>
+  </tbody>
+  </table>
 <% end %>
 
-<% if @ausgabe %>
-  
-   <%  @ausgabe.attributes.each do |attribute| %>
-  	 <th> <%= "#{attribute[0]}" %> </th>
-   <%  end %>
-   </thead>
-
-   <tbody>
-   <%  @ausgabe.attributes.each do |attribute| %>
-     <td><%= "#{attribute[1]} " %> </td>
-   <% end %>
-
-<% end %>
-
-<% if @ausgabes %>
-
-    <% example_ausgabe = Ausgabe.first %>
-
-    <% example_ausgabe.attributes.each do |attribute| %>
-      <th> <%= "#{attribute[0]}" %> </th>
-    <% end %>
-  </thead>
-  <tbody>
-  <% @ausgabes.each do |ausgabe| %>
-    <tr>
-      <% ausgabe.attributes.each do |ausgabe_attribute| %>
-        <td> <%= link_to "#{ausgabe_attribute[1]}", ausgabe %>
-      <% end %>
-    </tr>
-  <% end %>
-<% end %>
+<!-- ################ Mobilfunkgeraet ################# -->
 
 <% if @mobilfunkgeraet %>
   
+  <table class="table table-bordered">
+  <thead>
    <%  @mobilfunkgeraet.attributes.each do |attribute| %>
   	 <th> <%= "#{attribute[0]}" %> </th>
    <%  end %>
@@ -108,10 +95,13 @@
    <%  @mobilfunkgeraet.attributes.each do |attribute| %>
      <td><%= "#{attribute[1]} " %> </td>
    <% end %>
+   </tbody>
+   </table>
 <% end %>
 
 <% if @mobilfunkgeraets %>
-
+  <table class="table table-bordered">
+  <thead>
     <% example_mobile = Mobilfunkgeraet.first %>
 
     <% example_mobile.attributes.each do |attribute| %>
@@ -127,9 +117,49 @@
     </tr>
   <% end %>
   </tbody>
-</table>
-
+  </table>
 <% end %>
-</tbody>
-</table>
+
+<!-- ################ Ausgabe ################# -->
+
+<% if @ausgabe %>
+  
+  <table class="table table-bordered">
+  <thead>
+   <%  @ausgabe.attributes.each do |attribute| %>
+  	 <th> <%= "#{attribute[0]}" %> </th>
+   <%  end %>
+   </thead>
+
+   <tbody>
+   <%  @ausgabe.attributes.each do |attribute| %>
+     <td><%= "#{attribute[1]} " %> </td>
+   <% end %>
+   </tbody>
+   </table>
+<% end %>
+
+<% if @ausgabes %>
+  
+  <table class="table table-bordered">
+  <thead>
+    <% example_ausgabe = Ausgabe.first %>
+
+    <% example_ausgabe.attributes.each do |attribute| %>
+      <th> <%= "#{attribute[0]}" %> </th>
+    <% end %>
+  </thead>
+  <tbody>
+  <% @ausgabes.each do |ausgabe| %>
+    <tr>
+      <% ausgabe.attributes.each do |ausgabe_attribute| %>
+        <td> <%= link_to "#{ausgabe_attribute[1]}", ausgabe %>
+      <% end %>
+    </tr>
+  <% end %>
+  </tbody>
+  </table>
+<% end %>
+
+
 
